@@ -164,7 +164,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/wayfire/" style="color: #ff7d73">
+                <a href="/tags/wayfire/" style="color: #00a596">
                     wayfire
                 </a>
             </span>
@@ -305,14 +305,18 @@ ln -s ./kitty-themes/themes/Material.conf ~/.config/kitty/theme.conf
 <h3 id="6-4-ranger配置"><a href="#6-4-ranger配置" class="headerlink" title="6.4 ranger配置"></a>6.4 ranger配置</h3><pre><code class="Bash">git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 echo "default_linemode devicons" &gt;&gt; $HOME/.config/ranger/rc.conf
 </code></pre>
-<h3 id="6-5-wpaperd配置"><a href="#6-5-wpaperd配置" class="headerlink" title="6.5 wpaperd配置"></a>6.5 wpaperd配置</h3><div class="admonition todo"><p class="admonition-title">todo</p><p>wpaperd可以针对不同屏幕设置不同的壁纸以及不同定时的自动切换壁纸
+<h3 id="6-5-wpaperd配置"><a href="#6-5-wpaperd配置" class="headerlink" title="6.5 wpaperd配置"></a>6.5 wpaperd配置</h3><div class="admonition todo"><p class="admonition-title">定时自动切换壁纸
+</p><p>wpaperd可以针对不同屏幕设置不同的壁纸以及不同定时的自动切换壁纸
 以下为2块屏幕的相同定时时读取同一路径下随机壁纸的例子</p>
 <pre><code class="language-Bash">[eDP-1]
 path = "～/wallpaper/"
 apply-shadow = true
 duration = "6m"
-
-</code><p><code class="language-Bash">[HDMI-A-1]<br>path = "～/wallpaper/"<br>apply-shadow = true<br>duration = "6m"<br></code></p></pre><p></p>
+[HDMI-A-1]
+path = "～/wallpaper/"
+apply-shadow = true
+duration = "6m"
+</code></pre>
 </div>
 
 <h3 id="6-6-zsh主题-powerlevel10k"><a href="#6-6-zsh主题-powerlevel10k" class="headerlink" title="6.6 zsh主题-powerlevel10k"></a>6.6 zsh主题-powerlevel10k</h3><pre><code class="Bash">echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' &gt;&gt; ~/.zshrc
