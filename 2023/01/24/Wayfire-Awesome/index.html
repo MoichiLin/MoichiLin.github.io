@@ -164,7 +164,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/wayfire/" style="color: #00a596">
+                <a href="/tags/wayfire/" style="color: #ff7d73">
                     wayfire
                 </a>
             </span>
@@ -333,9 +333,11 @@ echo 'include themes/rEFInd-minimal/theme.conf' &gt;&gt; /efi/EFI/refind/refind.
 </code></pre>
 <pre><code class="language-Bash">[Unit]
 Description=Aria2 Daemon
+[Service]
+ExecStart=/usr/bin/aria2c --conf-path=/home/$username/.config/aria2/aria2.config
+[Install]
+WantedBy=default.target
 
-<p>[Service]<br>ExecStart=/usr/bin/aria2c –conf-path=/home/$username/.config/aria2/aria2.config</p>
-<p>[Install]<br>WantedBy=default.target</p>
 </code><p><code class="language-Bash"></code></p></pre><p></p>
 <pre><code class="language-Bash">touch ~/.config/aria2/aria2.session
 vim ~/.config/aria2/aria2.config
@@ -381,13 +383,16 @@ cp $ur_config.yaml /home/$username/.config/clash/
 <pre><code class="language-Bash">[Unit]
 Description=Clash daemon, A rule-based proxy in Go.
 After=network.target
-
-<p>[Service]<br>Type=simple<br>Restart=always<br>ExecStart=/usr/bin/clash -d /home/$username/.config/clash</p>
-</code><p><code class="language-Bash">[Install]<br>WantedBy=default.target<br></code></p></pre><p></p>
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/clash -d /home/$username/.config/clash
+[Install]
+WantedBy=default.target
+</code></pre>
 <pre><code class="language-Bash">systemctl --user enable --now clash #服务自启
 
-Dashboard: https://clash.razord.top/
-</code></pre>
+</code><p><code class="language-Bash">Dashboard: <a target="_blank" rel="noopener" href="https://clash.razord.top/">https://clash.razord.top/</a><br></code></p></pre><p></p>
 </div>
 
 <h3 id="6-12-yuzu配置"><a href="#6-12-yuzu配置" class="headerlink" title="6.12 yuzu配置"></a>6.12 yuzu配置</h3><div class="admonition todo"><p class="admonition-title">放置yuzu key
