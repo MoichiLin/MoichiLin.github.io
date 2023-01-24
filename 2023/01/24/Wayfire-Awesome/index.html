@@ -164,14 +164,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/wayfire/" style="color: #ffa2c4">
+                <a href="/tags/wayfire/" style="color: #00bcd4">
                     wayfire
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/awesome/" style="color: #00bcd4">
+                <a href="/tags/awesome/" style="color: #ff7d73">
                     awesome
                 </a>
             </span>
@@ -225,7 +225,7 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra        #安装�
 sudo pacman -S firefox                                                 #安装火狐浏览器
 sudo pacman -S ark p7zip unrar unarchiver lzop lrzip                   #解压工具
 sudo pacman -S git wget kate bind                                      #一些工具
-sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-jack wireplumber pipewire-pulse     #pipewire声音及音量控制
+sudo pacman -S alsa-utils pipewire pipewire-alsa pipewire-jack wireplumber pipewire-pulse  #pipewire声音及音量控制
 sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa pavucontrol pulseaudio-bluetooth      #pluse声音及音量控制
 
 sudo pacman -S brightnessctl      #屏幕背光控制
@@ -236,41 +236,41 @@ sudo pacman -S bluez bluez-utils bluez-libs bluez-qt bluez-tools blueman bluedev
 <h2 id="4-一些刚需软件"><a href="#4-一些刚需软件" class="headerlink" title="4 一些刚需软件"></a>4 一些刚需软件</h2><pre><code class="Bash">sudo pacman -S fcitx5-im              #基础包组
 sudo pacman -S fcitx5-chinese-addons  #官方中文输入引擎
 sudo pacman -S fcitx5-material-color  #主题
-yay -S kitty python-pillow      #kitty 在wayland下支持ranger预览文件
-yay -S waybar     #bar
-yay -S wofi       #wofi 作为一个程序检索和启动器
+yay -S kitty python-pillow            #kitty 在wayland下支持ranger预览文件
+yay -S waybar                         #bar
+yay -S wofi                           #wofi 作为一个程序检索和启动器
 yay -S ranger ttf-nerd-fonts-symbols-1000-em-mono highlight atool   #终端文件管理器
-yay -S swaylock   #锁屏
-yay -S kanshi     #屏幕
-yay -S wpaperd    #壁纸。 可自动切换同路径下随机壁纸
-yay -S mpvpaper   #视频壁纸
-yay -S thunar gvfs gvfs-mtp   #文件管理器
+yay -S swaylock                       #锁屏
+yay -S kanshi                         #屏幕
+yay -S wpaperd                        #壁纸。 可自动切换同路径下随机壁纸
+yay -S mpvpaper                       #视频壁纸
+yay -S thunar gvfs gvfs-mtp           #文件管理器
 yay -S thunar-archive-plugin file-roller
-yay -S wl-clipboard  #剪贴板
-yay -S wlogout    #wlogout 可用来帐户登出，关机重启等操作
-yay -S grim slurp   #截图
-yay -S mako       #通知
-yay -S greetd greetd-tuigreet   #登录管理器
+yay -S wl-clipboard                   #剪贴板
+yay -S wlogout                        #wlogout 可用来帐户登出，关机重启等操作
+yay -S grim slurp                     #截图
+yay -S mako                           #通知
+yay -S greetd greetd-tuigreet         #登录管理器
 </code></pre>
 <hr>
-<h2 id="5-其他软件"><a href="#5-其他软件" class="headerlink" title="5 其他软件"></a>5 其他软件</h2><pre><code class="Bash">yay -S v2raya-bin v2ray  #v2raya
-yay -S clash-premium-bin #clash
-yay -S --noconfirm zsh-theme-powerlevel10k  #zsh主题
-yay -S chromium google-chrome gtk4 icalingua++ #chrome QQ
-sudo pacman -S aria2  #aria2服务
-sudo pacman -S mpv nomacs kate #视频播放 图片查看 文本编辑
+<h2 id="5-其他软件"><a href="#5-其他软件" class="headerlink" title="5 其他软件"></a>5 其他软件</h2><pre><code class="Bash">yay -S v2raya-bin v2ray                           #v2raya
+yay -S clash-premium-bin                          #clash
+yay -S --noconfirm zsh-theme-powerlevel10k        #zsh主题
+yay -S chromium google-chrome gtk4 icalingua++    #chrome QQ
+sudo pacman -S aria2                              #aria2服务
+sudo pacman -S mpv nomacs kate                    #视频播放 图片查看 文本编辑
 yay -S gamemode steam lutris
-yay -S dxvk-bin vkd3d vkd3d-proton-bin  #dx9,10,11,12 to vulkan
+yay -S dxvk-bin vkd3d vkd3d-proton-bin            #dx9,10,11,12 to vulkan
 yay -S vbam-wx fceux melonds-bin citra-qt-bin ffmpeg4.4 yuzu-mainline-bin #GBA FC NDS 3DS SWITCH 模拟器
-yay -S mesen desmume-git #另可选FC和NDS模拟器 不推荐
-yay -S retroarch retroarch-assets-ozone retroarch-assets-xmb libretro-nestopia-git libretro-vba-next-git libretro-desmume-git #retroarch 包含很多常见游戏平台的模拟器
+yay -S mesen desmume-git                          #另可选FC和NDS模拟器 不推荐
+yay -S retroarch retroarch-assets-ozone retroarch-assets-xmb libretro-nestopia-git libretro-vba-next-git libretro-desmume-git  #retroarch 包含很多常见游戏平台的模拟器
 sudo pacman -S virtualbox virtualbox-host-dkms virtualbox-guest-iso  #virtualbox
 yay -S virtualbox-ext-oracle
-yay -S obs-studio wlrobs-hg #OBS
-sudo pacman -S refind  #引导工具
-yay -S scrcpy        #投屏软件
-yay -S android-tools #adb工具
-yay -S genymotion    #安卓环境基于vbox,建议添加arm_translation以支持arm转换
+yay -S obs-studio wlrobs-hg                       #OBS
+sudo pacman -S refind                             #引导工具
+yay -S scrcpy                                     #投屏软件
+yay -S android-tools                              #adb工具
+yay -S genymotion                                 #安卓环境基于vbox,建议添加arm_translation以支持arm转换
 </code></pre>
 <div class="admonition note"><p class="admonition-title">arm转译包
 </p><p><a target="_blank" rel="noopener" href="https://github.com/m9rco/Genymotion_ARM_Translation">arm_translation</a></p>
@@ -324,10 +324,10 @@ duration = "6m"
 </code></pre>
 <h3 id="6-7-vbox配置"><a href="#6-7-vbox配置" class="headerlink" title="6.7 vbox配置"></a>6.7 vbox配置</h3><pre><code class="Bash">sudo usermod -a -G vboxusers $USER
 </code></pre>
-<h3 id="6-8-refind配置"><a href="#6-8-refind配置" class="headerlink" title="6.8 refind配置"></a>6.8 refind配置</h3><pre><code class="Bash">refind-install                     #安装refind
-sudo cp -r $theme /efi/EFI/refind/ #复制主题 推荐rEFInd-minimal
+<h3 id="6-8-refind配置"><a href="#6-8-refind配置" class="headerlink" title="6.8 refind配置"></a>6.8 refind配置</h3><pre><code class="Bash">refind-install                      #安装refind
+sudo cp -r $theme /efi/EFI/refind/  #复制主题 推荐rEFInd-minimal
 sudo su
-echo 'include themes/rEFInd-minimal/theme.conf' &gt;&gt; /efi/EFI/refind/refind.conf #应用主题
+echo 'include themes/rEFInd-minimal/theme.conf' &gt;&gt; /efi/EFI/refind/refind.conf  #应用主题
 </code></pre>
 <h3 id="6-9-aria2配置"><a href="#6-9-aria2配置" class="headerlink" title="6.9 aria2配置"></a>6.9 aria2配置</h3><div class="admonition todo"><p class="admonition-title">编辑 aria2.service
 </p><pre><code class="language-Bash">sudo vim /etc/systemd/user/aria2.service
@@ -342,7 +342,7 @@ WantedBy=default.target
 </code><p><code class="language-Bash"></code></p></pre><p></p>
 <pre><code class="language-Bash">touch ~/.config/aria2/aria2.session
 vim ~/.config/aria2/aria2.config
-systemctl --user enable --now aria2 #非root服务自启
+systemctl --user enable --now aria2  #非root服务自启
 </code></pre>
 <blockquote>
 <p>config可以在网上找一份，也可以改一改我的</p>
@@ -350,7 +350,7 @@ systemctl --user enable --now aria2 #非root服务自启
 </div>
 
 <h3 id="6-10-V2raya"><a href="#6-10-V2raya" class="headerlink" title="6.10 V2raya"></a>6.10 V2raya</h3><pre><code class="Bash">yay -S v2raya-bin v2ray
-sudo systemctl enable --now v2raya #服务自启
+sudo systemctl enable --now v2raya  #服务自启
 Dashboard: 127.0.0.1:2017
 </code></pre>
 <h3 id="6-11-Clash"><a href="#6-11-Clash" class="headerlink" title="6.11 Clash"></a>6.11 Clash</h3><pre><code class="Bash">yay -S clash_permium_bin
@@ -420,7 +420,7 @@ Preferred Ozone platform 换成 wayland
 </div>
 
 <hr>
-<h2 id="7-Waydroid-不推荐"><a href="#7-Waydroid-不推荐" class="headerlink" title="7 Waydroid (不推荐)"></a>7 Waydroid (不推荐)</h2><pre><code class="Bash">yay -S waydroid waydroid-image #waydroid
+<h2 id="7-Waydroid-不推荐"><a href="#7-Waydroid-不推荐" class="headerlink" title="7 Waydroid (不推荐)"></a>7 Waydroid (不推荐)</h2><pre><code class="Bash">yay -S waydroid waydroid-image
 sudo waydroid init
 sudo waydroid init -s GAPPS -f
 systemctl start waydroid-container.service

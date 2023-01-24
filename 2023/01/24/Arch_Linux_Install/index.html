@@ -164,7 +164,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/arch/" style="color: #ff7d73">
+                <a href="/tags/arch/" style="color: #00a596">
                     arch
                 </a>
             </span>
@@ -205,8 +205,8 @@ quit                        #最后quit退出parted命令行交互
 <pre><code class="Bash">cfdisk /dev/sdx #来执行分区操作,分配各个分区大小，类型
 fdisk -l #分区结束后， 复查磁盘情况
 </code></pre>
-<h2 id="5-格式化"><a href="#5-格式化" class="headerlink" title="5.格式化"></a>5.格式化</h2><pre><code class="Bash">mkfs.ext4  /dev/nvme0n1p2            #格式化根目录和home目录的两个分区
-mkfs.vfat  /dev/nvme0n1p1            #格式化efi分区
+<h2 id="5-格式化"><a href="#5-格式化" class="headerlink" title="5.格式化"></a>5.格式化</h2><pre><code class="Bash">mkfs.ext4  /dev/nvme0n1p2   #格式化根目录和home目录的两个分区
+mkfs.vfat  /dev/nvme0n1p1   #格式化efi分区
 </code></pre>
 <h2 id="6-挂载"><a href="#6-挂载" class="headerlink" title="6.挂载"></a>6.挂载</h2><p>在挂载时，挂载是有顺序的，先挂载根分区，再挂载 EFI 分区</p>
 <pre><code class="Bash">mount /dev/nvme0n1p2  /mnt
@@ -219,7 +219,7 @@ mount /dev/sda1 /mnt/home
 <pre><code class="Bash">vim /etc/pacman.d/mirrorlist
 </code></pre>
 <h2 id="8-安装系统"><a href="#8-安装系统" class="headerlink" title="8.安装系统"></a>8.安装系统</h2><pre><code class="Bash">pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware    #base-devel在AUR包的安装是必须的
-pacstrap /mnt dhcpcd iwd vim bash-completion zsh networkmanager                           #一个有线所需(iwd也需要dhcpcd) 一个无线所需 一个编辑器 一个补全工具
+pacstrap /mnt dhcpcd iwd vim bash-completion zsh networkmanager             #一个有线所需(iwd也需要dhcpcd) 一个无线所需 一个编辑器 一个补全工具
 </code></pre>
 <h2 id="9-生成-fstab-文件"><a href="#9-生成-fstab-文件" class="headerlink" title="9.生成 fstab 文件"></a>9.生成 fstab 文件</h2><p>fstab 用来定义磁盘分区</p>
 <pre><code class="Bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
@@ -270,8 +270,8 @@ reboot              # 重启
 <pre><code class="Bash">systemctl enable --now dhcpcd  #立即启动dhcp
 </code></pre>
 <p>若为无线链接，则还需要启动 iwd 才可以使用 iwctl 连接网络</p>
-<pre><code class="Bash">systemctl start iwd #立即启动iwd
-iwctl               #和之前的方式一样，连接无线网络
+<pre><code class="Bash">systemctl start iwd  #立即启动iwd
+iwctl                #和之前的方式一样，连接无线网络
 </code></pre>
 <h2 id="18-准备非-root-用户"><a href="#18-准备非-root-用户" class="headerlink" title="18.准备非 root 用户"></a>18.准备非 root 用户</h2><pre><code class="Bash">useradd -m -G wheel -s /bin/zsh testuser  #wheel附加组可sudo，以root用户执行命令 -m同时创建用户家目录
 </code></pre>
