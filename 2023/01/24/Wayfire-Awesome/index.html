@@ -155,14 +155,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/wayfire/" style="color: #ff7d73">
+                <a href="/tags/wayfire/" style="color: #00a596">
                     wayfire
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/awesome/" style="color: #00a596">
+                <a href="/tags/awesome/" style="color: #00bcd4">
                     awesome
                 </a>
             </span>
@@ -174,7 +174,10 @@
     <div class="content" v-pre>
         <h1 id="Wayfire"><a href="#Wayfire" class="headerlink" title="Wayfire"></a>Wayfire</h1><p><code>Wayfire is a wayland compositor based on wlroots. It aims to create a customizable, extendable and lightweight environment without sacrificing its appearance.</code><br><code>Wayfire是一个基于wlroots的wayland合成器。它旨在创建一个可定制的、可扩展的、轻量级的环境，且不牺牲其外观。</code><br>官网 <a target="_blank" rel="noopener" href="https://wayfire.org/">Wayfire</a><br>Github <a target="_blank" rel="noopener" href="https://github.com/WayfireWM/wayfire">Wayfire</a></p>
 <hr>
-<p>{fwcode type=”success”}<br><a target="_blank" rel="noopener" href="https://github.com/MoichiLin">我的dotfiles</a><br>{/fwcode}</p>
+<div class="admonition note"><p class="admonition-title">我的dotfiles文件(github)
+</p><p><a target="_blank" rel="noopener" href="https://github.com/MoichiLin">我的dotfiles</a></p>
+</div>
+
 <hr>
 <h2 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h2><pre><code class="Bash">sudo systemctl enable --now NetworkManager
 nmcli dev wifi list
@@ -182,21 +185,24 @@ nmcli dev wifi connect $WIFI-SSID password $WIFI-PASSWD
 nmcli dev wifi connect $WIFI-SSID password $WIFI-PASSWD hidden yes #连接隐藏wifi
 </code></pre>
 <hr>
-<h2 id="0-开启-32-位支持库"><a href="#0-开启-32-位支持库" class="headerlink" title="0 开启 32 位支持库"></a>0 开启 32 位支持库</h2><p>{fwcode type=”info”}<br>去掉 <code>[multilib]</code> 一节中两行的注释，来开启 32 位库支持。</p>
-<pre><code class="Bash">sudo vim /etc/pacman.conf
+<h2 id="0-开启-32-位支持库"><a href="#0-开启-32-位支持库" class="headerlink" title="0 开启 32 位支持库"></a>0 开启 32 位支持库</h2><div class="admonition todo"><p class="admonition-title">编译pacman.conf
+</p><p>去掉 <code>[multilib]</code> 一节中两行的注释，来开启 32 位库支持。</p>
+<pre><code class="language-Bash">sudo vim /etc/pacman.conf
 </code></pre>
-<p>{/fwcode}</p>
+</div>
+
 <hr>
 <h2 id="1-安装-yay"><a href="#1-安装-yay" class="headerlink" title="1 安装 yay"></a>1 安装 yay</h2><pre><code class="Bash">wget https://arch.moichi.cn/res/yay-bin.pkg.tar.zst
 sudo pacman -U yay-bin.pkg.tar.zst
 </code></pre>
 <hr>
-<h2 id="2-安装Wayfire"><a href="#2-安装Wayfire" class="headerlink" title="2 安装Wayfire"></a>2 安装Wayfire</h2><p>{fwcode type=”warning”}<br>注意wayfire与wayfire-git的不同情况下的选择</p>
-<pre><code class="Bash">yay -S wayfire
+<h2 id="2-安装Wayfire"><a href="#2-安装Wayfire" class="headerlink" title="2 安装Wayfire"></a>2 安装Wayfire</h2><div class="admonition warning"><p class="admonition-title">注意wayfire与wayfire-git的不同情况下的选择
+</p><pre><code class="language-Bash">yay -S wayfire
 yay -S wayfire-lily-git    #archlinuxcn 依云
 yay -S polkit
 </code></pre>
-<p>{/fwcode}</p>
+</div>
+
 <hr>
 <h2 id="3-安装必要软件"><a href="#3-安装必要软件" class="headerlink" title="3 安装必要软件"></a>3 安装必要软件</h2><pre><code class="Bash">yay -S qt6-wayland
 yay -S qt5-wayland
@@ -253,55 +259,51 @@ yay -S scrcpy        #投屏软件
 yay -S android-tools #adb工具
 yay -S genymotion    #安卓环境基于vbox,建议添加arm_translation以支持arm转换
 </code></pre>
-<p>{fwcode type=”success”}<br><a target="_blank" rel="noopener" href="https://github.com/m9rco/Genymotion_ARM_Translation">arm_translation</a><br>{/fwcode}</p>
-<h3 id="6-1-设置环境变量"><a href="#6-1-设置环境变量" class="headerlink" title="6.1 设置环境变量"></a>6.1 设置环境变量</h3><p>{fwcode type=”info”}<br>在 <code>/etc/environment</code> 加入以下内容</p>
-<pre><code class="Bash">GTK_IM_MODULE=fcitx
+<div class="admonition note"><p class="admonition-title">arm转译包
+</p><p><a target="_blank" rel="noopener" href="https://github.com/m9rco/Genymotion_ARM_Translation">arm_translation</a></p>
+</div>
+
+<h2 id="6-各软件的配置"><a href="#6-各软件的配置" class="headerlink" title="6 各软件的配置"></a>6 各软件的配置</h2><h3 id="6-1-设置环境变量"><a href="#6-1-设置环境变量" class="headerlink" title="6.1 设置环境变量"></a>6.1 设置环境变量</h3><div class="admonition todo"><p class="admonition-title">编辑environment
+</p><p>在 <code>/etc/environment</code> 加入以下内容</p>
+<pre><code class="language-Bash">GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 SDL_IM_MODULE=fcitx
 INPUT_METHOD=fcitx
 GLFW_IM_MODULE=ibus
 </code></pre>
-<p>{/fwcode}</p>
-<hr>
-<h2 id="6-各软件的配置"><a href="#6-各软件的配置" class="headerlink" title="6 各软件的配置"></a>6 各软件的配置</h2><h3 id="6-1-设置环境变量-1"><a href="#6-1-设置环境变量-1" class="headerlink" title="6.1 设置环境变量"></a>6.1 设置环境变量</h3><p>{fwcode type=”info”}<br>在 <code>/etc/environment</code> 加入以下内容</p>
-<pre><code class="Bash">GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SDL_IM_MODULE=fcitx
-INPUT_METHOD=fcitx
-GLFW_IM_MODULE=ibus
-</code></pre>
-<p>{/fwcode}</p>
-<h3 id="6-2-greetd配置"><a href="#6-2-greetd配置" class="headerlink" title="6.2 greetd配置"></a>6.2 greetd配置</h3><p>{fwcode type=”info”}<br>编缉 <code>/etc/greetd/config.toml</code></p>
-<pre><code class="Bash">[default_session]
+</div>
+
+<h3 id="6-2-greetd配置"><a href="#6-2-greetd配置" class="headerlink" title="6.2 greetd配置"></a>6.2 greetd配置</h3><div class="admonition todo"><p class="admonition-title">编缉 `/etc/greetd/config.toml`
+</p><pre><code class="language-Bash">[default_session]
 command = "tuigreet --cmd wayfire"
 user = "$USER"
 </code></pre>
-<p>{/fwcode}</p>
-<h3 id="6-3-kitty配置"><a href="#6-3-kitty配置" class="headerlink" title="6.3 kitty配置"></a>6.3 kitty配置</h3><pre><code class="Bash">cd ~/.config/kitty
+</div>
+
+<h3 id="6-3-kitty配置"><a href="#6-3-kitty配置" class="headerlink" title="6.3 kitty配置"></a>6.3 kitty配置</h3><pre><code>```Bash
+cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Material.conf ~/.config/kitty/theme.conf
+```
 </code></pre>
-<p>{fwcode type=”info”}<br>在 <code>kitty.conf</code> 里添加</p>
-<pre><code class="Bash">include ./theme.conf
+<div class="admonition todo"><p class="admonition-title">在 `kitty.conf` 里添加内容
+</p><pre><code class="language-Bash">include ./theme.conf
 </code></pre>
-<p>{/fwcode}</p>
+</div>
+
 <h3 id="6-4-ranger配置"><a href="#6-4-ranger配置" class="headerlink" title="6.4 ranger配置"></a>6.4 ranger配置</h3><pre><code class="Bash">git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 echo "default_linemode devicons" &gt;&gt; $HOME/.config/ranger/rc.conf
 </code></pre>
-<h3 id="6-5-wpaperd配置"><a href="#6-5-wpaperd配置" class="headerlink" title="6.5 wpaperd配置"></a>6.5 wpaperd配置</h3><p>{fwcode type=”info”}<br>wpaperd可以针对不同屏幕设置不同的壁纸以及不同定时的自动切换壁纸<br>以下为2块屏幕的相同定时时读取同一路径下随机壁纸的例子</p>
-<pre><code class="Bash">[eDP-1]
+<h3 id="6-5-wpaperd配置"><a href="#6-5-wpaperd配置" class="headerlink" title="6.5 wpaperd配置"></a>6.5 wpaperd配置</h3><div class="admonition todo"><p class="admonition-title">todo</p><p>wpaperd可以针对不同屏幕设置不同的壁纸以及不同定时的自动切换壁纸
+以下为2块屏幕的相同定时时读取同一路径下随机壁纸的例子</p>
+<pre><code class="language-Bash">[eDP-1]
 path = "～/wallpaper/"
 apply-shadow = true
 duration = "6m"
 
-[HDMI-A-1]
-path = "～/wallpaper/"
-apply-shadow = true
-duration = "6m"
-</code></pre>
-<p>{/fwcode}</p>
-<hr>
+</code><p><code class="language-Bash">[HDMI-A-1]<br>path = "～/wallpaper/"<br>apply-shadow = true<br>duration = "6m"<br></code></p></pre><p></p>
+</div>
+
 <h3 id="6-6-zsh主题-powerlevel10k"><a href="#6-6-zsh主题-powerlevel10k" class="headerlink" title="6.6 zsh主题-powerlevel10k"></a>6.6 zsh主题-powerlevel10k</h3><pre><code class="Bash">echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' &gt;&gt; ~/.zshrc
 </code></pre>
 <h3 id="6-7-vbox配置"><a href="#6-7-vbox配置" class="headerlink" title="6.7 vbox配置"></a>6.7 vbox配置</h3><pre><code class="Bash">sudo usermod -a -G vboxusers $USER
@@ -311,24 +313,24 @@ sudo cp -r $theme /efi/EFI/refind/ #复制主题 推荐rEFInd-minimal
 sudo su
 echo 'include themes/rEFInd-minimal/theme.conf' &gt;&gt; /efi/EFI/refind/refind.conf #应用主题
 </code></pre>
-<h3 id="6-9-aria2配置"><a href="#6-9-aria2配置" class="headerlink" title="6.9 aria2配置"></a>6.9 aria2配置</h3><p>{fwcode type=”info”}<br>编辑 aria2.service</p>
-<pre><code class="Bash">sudo vim /etc/systemd/user/aria2.service
+<h3 id="6-9-aria2配置"><a href="#6-9-aria2配置" class="headerlink" title="6.9 aria2配置"></a>6.9 aria2配置</h3><div class="admonition todo"><p class="admonition-title">编辑 aria2.service
+</p><pre><code class="language-Bash">sudo vim /etc/systemd/user/aria2.service
 </code></pre>
-<pre><code class="Bash">[Unit]
+<pre><code class="language-Bash">[Unit]
 Description=Aria2 Daemon
 
-[Service]
-ExecStart=/usr/bin/aria2c --conf-path=/home/$username/.config/aria2/aria2.config
-
-[Install]
-WantedBy=default.target
-</code></pre>
-<pre><code class="Bash">touch ~/.config/aria2/aria2.session
+<p>[Service]<br>ExecStart=/usr/bin/aria2c –conf-path=/home/$username/.config/aria2/aria2.config</p>
+<p>[Install]<br>WantedBy=default.target</p>
+</code><p><code class="language-Bash"></code></p></pre><p></p>
+<pre><code class="language-Bash">touch ~/.config/aria2/aria2.session
 vim ~/.config/aria2/aria2.config
 systemctl --user enable --now aria2 #非root服务自启
 </code></pre>
-<p>{/fwcode}</p>
-<p>{fwcode type=”info”}<br>config可以在网上找一份，也可以改一改我的<br>{/fwcode}</p>
+<blockquote>
+<p>config可以在网上找一份，也可以改一改我的</p>
+</blockquote>
+</div>
+
 <h3 id="6-10-V2raya"><a href="#6-10-V2raya" class="headerlink" title="6.10 V2raya"></a>6.10 V2raya</h3><pre><code class="Bash">yay -S v2raya-bin v2ray
 sudo systemctl enable --now v2raya #服务自启
 Dashboard: 127.0.0.1:2017
@@ -340,43 +342,62 @@ start with `clash`
 cp $Country.mmdb /home/$username/.config/clash/
 cp $ur_config.yaml /home/$username/.config/clash/
 </code></pre>
-<p>{fwcode type=”success”}<br><a target="_blank" rel="noopener" href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">Country.mmdb</a><br>{/fwcode}</p>
-<h4 id="7-6-1-Clash-TUN-及分流配置"><a href="#7-6-1-Clash-TUN-及分流配置" class="headerlink" title="7.6.1 Clash TUN 及分流配置"></a>7.6.1 Clash TUN 及分流配置</h4><p>{fwcode type=”info”}<br>开启流量转发</p>
-<pre><code class="Bash">sysctl -w net.ipv4.ip_forward=1
+<div class="admonition note"><p class="admonition-title">clash依赖
+</p><p><a target="_blank" rel="noopener" href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">Country.mmdb</a></p>
+</div>
+
+<h4 id="7-6-1-Clash-TUN-及分流配置"><a href="#7-6-1-Clash-TUN-及分流配置" class="headerlink" title="7.6.1 Clash TUN 及分流配置"></a>7.6.1 Clash TUN 及分流配置</h4><div class="admonition todo"><p class="admonition-title">开启流量转发
+</p><pre><code class="language-Bash">sysctl -w net.ipv4.ip_forward=1
 </code></pre>
-<p>{/fwcode}</p>
-<p>{fwcode type=”info”}<br>53端口可能被占用，先关掉默认系统DNS端口</p>
-<pre><code class="Bash">systemctl disable systemd-resolved
+</div>
+
+<div class="admonition todo"><p class="admonition-title">53端口可能被占用，先关掉默认系统DNS端口
+</p><pre><code class="language-Bash">systemctl disable systemd-resolved
 </code></pre>
-<p>{/fwcode}</p>
-<p>{fwcode type=”info”}<br>配置config.yaml<br>{/fwcode}<br>{fwcode type=”success”}<br>配置荐例<br><a target="_blank" rel="noopener" href="https://github.com/MoichiLin/dotfiles/blob/main/clash/config.yaml">dotfile</a><br>{/fwcode}</p>
-<p>{fwcode type=”info”}<br>编辑 clash.service</p>
-<pre><code class="Bash">sudo vim /etc/systemd/user/clash.service
+</div>
+
+<div class="admonition todo"><p class="admonition-title">配置config.yaml
+</p><p><a target="_blank" rel="noopener" href="https://github.com/MoichiLin/dotfiles/blob/main/clash/config.yaml">dotfile</a></p>
+</div>
+
+<div class="admonition todo"><p class="admonition-title">编辑 clash.service
+</p><pre><code class="language-Bash">sudo vim /etc/systemd/user/clash.service
 </code></pre>
-<pre><code class="Bash">[Unit]
+<pre><code class="language-Bash">[Unit]
 Description=Clash daemon, A rule-based proxy in Go.
 After=network.target
 
-[Service]
-Type=simple
-Restart=always
-ExecStart=/usr/bin/clash -d /home/$username/.config/clash
-
-[Install]
-WantedBy=default.target
-</code></pre>
-<p>{/fwcode}</p>
-<pre><code class="Bash">systemctl --user enable --now clash #服务自启
+<p>[Service]<br>Type=simple<br>Restart=always<br>ExecStart=/usr/bin/clash -d /home/$username/.config/clash</p>
+</code><p><code class="language-Bash">[Install]<br>WantedBy=default.target<br></code></p></pre><p></p>
+<pre><code class="language-Bash">systemctl --user enable --now clash #服务自启
 
 Dashboard: https://clash.razord.top/
 </code></pre>
-<hr>
-<h3 id="6-12-yuzu配置"><a href="#6-12-yuzu配置" class="headerlink" title="6.12 yuzu配置"></a>6.12 yuzu配置</h3><p>{fwcode type=”info”}<br>运行yuzu需要key<br>把以下文件解压覆盖到<br><code>~/.local/share/yuzu/</code><br>{/fwcode}<br>{fwcode type=”success”}<br><a target="_blank" rel="noopener" href="https://www.dropbox.com/s/zzmrx35emikqfn0/YUZU_KEY.rar?dl=0">YUZU_KEY</a><br>{/fwcode}</p>
-<h3 id="6-13-Chromium-开启Google-Chrome同步"><a href="#6-13-Chromium-开启Google-Chrome同步" class="headerlink" title="6.13 Chromium 开启Google Chrome同步"></a>6.13 Chromium 开启Google Chrome同步</h3><p><a target="_blank" rel="noopener" href="https://nyac.at/posts/google-sync-in-chromium">外链</a></p>
-<h3 id="6-14-Chrome-wayland-不建议"><a href="#6-14-Chrome-wayland-不建议" class="headerlink" title="6.14 Chrome wayland (不建议)"></a>6.14 Chrome wayland (不建议)</h3><p>{fwcode type=”info”}<br>把 <code>--gtk-version=4</code> 添加到每一个Exec的未尾<br>在chrome上打开chrome://flags<br>Preferred Ozone platform 换成 wayland<br>以支持fcitx5在chrome在wayland下运行</p>
-<pre><code class="Bash">sudo vim /usr/share/applications/google-chrome.desktop
+</div>
+
+<h3 id="6-12-yuzu配置"><a href="#6-12-yuzu配置" class="headerlink" title="6.12 yuzu配置"></a>6.12 yuzu配置</h3><div class="admonition todo"><p class="admonition-title">放置yuzu key
+</p><p>运行yuzu需要key
+把以下文件解压覆盖到
+<code>~/.local/share/yuzu/</code></p>
+</div>
+
+<div class="admonition note"><p class="admonition-title">key文件
+</p><p><a target="_blank" rel="noopener" href="https://www.dropbox.com/s/zzmrx35emikqfn0/YUZU_KEY.rar?dl=0">YUZU_KEY</a></p>
+</div>
+
+<h3 id="6-13-Chromium-开启Google-Chrome同步"><a href="#6-13-Chromium-开启Google-Chrome同步" class="headerlink" title="6.13 Chromium 开启Google Chrome同步"></a>6.13 Chromium 开启Google Chrome同步</h3><div class="admonition warning"><p class="admonition-title">其他文章
+</p><p><a target="_blank" rel="noopener" href="https://nyac.at/posts/google-sync-in-chromium">外链</a></p>
+</div>
+
+<h3 id="6-14-Chrome-wayland-不建议"><a href="#6-14-Chrome-wayland-不建议" class="headerlink" title="6.14 Chrome wayland (不建议)"></a>6.14 Chrome wayland (不建议)</h3><div class="admonition info"><p class="admonition-title">让Chrome在wayland下运行
+</p><p>把 <code>--gtk-version=4</code> 添加到每一个Exec的未尾
+在chrome上打开chrome://flags
+Preferred Ozone platform 换成 wayland
+以支持fcitx5在chrome在wayland下运行</p>
+<pre><code class="language-Bash">sudo vim /usr/share/applications/google-chrome.desktop
 </code></pre>
-<p>{/fwcode}</p>
+</div>
+
 <h2 id="7-Waydroid-不推荐"><a href="#7-Waydroid-不推荐" class="headerlink" title="7 Waydroid (不推荐)"></a>7 Waydroid (不推荐)</h2><pre><code class="Bash">yay -S waydroid waydroid-image #waydroid
 sudo waydroid init
 sudo waydroid init -s GAPPS -f
@@ -390,15 +411,19 @@ yay -S awesome-git picom-git playerctl pamixer numlockx
 yay -S feh flameshot rofi
 echo "exec awesome" &gt; ~/.xinitrc
 </code></pre>
-<p>{fwcode type=”info”}<br>启动时，需要在greetd里F2更改命令为<code>startx</code><br>{/fwcode}</p>
-<hr>
-<p>{fwcode type=”info”}<br>定时自动切换壁纸<br>先写一个sh让它开机时自动运行<br>sh里就写上feh设置随机壁纸的循环<br><code>vim ~/wallpaper/readom.sh</code><br>6m自动切换一次</p>
-<pre><code class="Bash">while true; do
-    feh --bg-fill --randomize --no-fehbg ~/wallpaper/*
-    sleep 6m
+<p>!!! warning<br>启动时，需要在greetd里F2更改命令为<code>startx</code></p>
+<div class="admonition todo"><p class="admonition-title">定时自动切换壁纸
+</p><p>先写一个sh让它开机时自动运行
+sh里就写上feh设置随机壁纸的循环
+<code>vim ~/wallpaper/readom.sh</code>
+6m自动切换一次</p>
+<pre><code class="language-Bash">while true; do
+feh --bg-fill --randomize --no-fehbg ~/wallpaper/*
+sleep 6m
 done
 </code></pre>
-<p>{/fwcode}</p>
+</div>
+
 
     </div>
     
