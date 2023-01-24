@@ -164,7 +164,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/arch/" style="color: #00bcd4">
+                <a href="/tags/arch/" style="color: #00a596">
                     arch
                 </a>
             </span>
@@ -176,6 +176,7 @@
     <div class="content" v-pre>
         <p>本篇皆在搭建好Arch的所有基础环境，不涉及DE和WM的安装</p>
 <span id="more"></span>
+
 <h1 id="本文来源-ArchLinuxStudio"><a href="#本文来源-ArchLinuxStudio" class="headerlink" title="本文来源 ArchLinuxStudio"></a>本文来源 <a target="_blank" rel="noopener" href="https://archlinuxstudio.github.io/ArchLinuxTutorial/">ArchLinuxStudio</a></h1><h1 id="Arch-Linux-基础安装"><a href="#Arch-Linux-基础安装" class="headerlink" title="Arch Linux 基础安装"></a>Arch Linux 基础安装</h1><p>本节从安装最基础的无图形化 ArchLinux 系统开始。<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Installation_guide">官方安装指南</a></p>
 <h2 id="0-禁用-reflector"><a href="#0-禁用-reflector" class="headerlink" title="0.禁用 reflector"></a>0.禁用 reflector</h2><p>reflector 会为你选择速度合适的镜像源，但其结果并不准确，同时会清空配置文件中的内容，对于新人来讲并不适用，我们首先对其进行禁用。</p>
 <pre><code class="Bash">systemctl stop reflector.service
