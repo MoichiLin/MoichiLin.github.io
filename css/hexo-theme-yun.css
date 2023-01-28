@@ -135,12 +135,12 @@ html.dark {
   --hty-secondary-text-color: #eee;
   --post-block-bg-color: #1b1f2e;
   --smc-link-color: #3ca1ff;
-  --yun-bg-image: url("https://cdn.yunyoujun.cn/img/bg/galaxy.jpg");
+  --yun-bg-image: url("https://pic.imgdb.cn/item/63d57105face21e9ef27188b.jpg");
   --banner-line-color: #fff;
   --banner-char-color: #fff;
   --banner-char-bg-color: rgba(0,0,0,0.5);
   --banner-char-hover-color: #000;
-  --post-card-bg-color: rgba(27,31,46,0.7);
+  --post-card-bg-color: rgba(27,31,46,0.8);
   --post-card-shadow: 0 1px 8px rgba(27,31,46,0.1);
   --sidebar-bg-color: rgba(27,31,46,0.95);
   --sidebar-bg-image: url("");
@@ -295,6 +295,7 @@ body::before {
   animation-name: bgFadeIn;
   animation-duration: 2s;
   opacity: 1;
+  filter: blur(5px);
 }
 @-moz-keyframes bgFadeIn {
   from {
@@ -1272,7 +1273,7 @@ input {
   }
 }
 :root {
-  --post-card-bg-color: rgba(255,255,255,0.7);
+  --post-card-bg-color: rgba(255,255,255,0.8);
   --post-card-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
 .post-card {
@@ -2375,57 +2376,4 @@ iframe.bilibili-video {
 #decryptButton .icon {
   width: 1.5rem;
   height: 1.5rem;
-}
-#girls {
-  text-align: center;
-}
-.girls-number {
-  color: #fff;
-}
-.girl-items {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-left: 0;
-}
-.girl-item {
-  display: inline-flex;
-  text-align: center;
-  justify-content: center;
-  width: 8rem;
-  margin: 1rem;
-}
-.girl-item .girl-info {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-.girl-item .girl-avatar {
-  object-fit: cover;
-  object-position: center top;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  padding: 0.2rem;
-  background-color: #fff;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.12);
-  transition: 0.5s;
-}
-.girl-item .girl-avatar:hover {
-  box-shadow: 0 0 2rem rgba(0,0,0,0.12);
-}
-.girl-item .girl-name {
-  font-size: 0.9rem;
-}
-.girl-item .girl-from {
-  font-size: 12px;
-  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
-  font-weight: bold;
-  color: var(--hty-secondary-text-color);
-}
-.girl-item .girl-from::before {
-  content: '「';
-}
-.girl-item .girl-from::after {
-  content: '」';
 }
