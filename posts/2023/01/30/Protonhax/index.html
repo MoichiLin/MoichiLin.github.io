@@ -16,7 +16,7 @@ document.addEventListener("pjax:success", initScrollReveal);
 <meta property="og:description" content="使软件运行在与游戏运行相同的proton容器下，比如游戏修改器github项目地址">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-29T20:58:28.000Z">
-<meta property="article:modified_time" content="2023-01-29T21:09:32.677Z">
+<meta property="article:modified_time" content="2023-01-29T21:10:46.596Z">
 <meta property="article:author" content="Moichi Lin">
 <meta property="article:tag" content="arch">
 <meta property="article:tag" content="proton">
@@ -46,12 +46,17 @@ IconifyProviders = {
 <h1 id="安装protonhax"><a href="#安装protonhax" class="headerlink" title="安装protonhax"></a>安装protonhax</h1><p>Arch Linux从aur安装</p>
 <pre><code class="Bash">yay -S protonhax
 </code></pre>
-<h1 id="设置启动项"><a href="#设置启动项" class="headerlink" title="设置启动项"></a>设置启动项</h1><p>右键你的steam游戏<br>在launch option里加入<code>protonhax init %COMMAND%</code><br>如果你用prime-run，加在前面就行</p>
-<h1 id="运行方式"><a href="#运行方式" class="headerlink" title="运行方式"></a>运行方式</h1><h2 id="找到你运行的游戏ID"><a href="#找到你运行的游戏ID" class="headerlink" title="找到你运行的游戏ID"></a>找到你运行的游戏ID</h2><p>protonhax ls</p>
+<h1 id="设置启动项"><a href="#设置启动项" class="headerlink" title="设置启动项"></a>设置启动项</h1><p>右键你的steam游戏<br>在launch option里加入</p>
+<pre><code class="Bash">protonhax init %COMMAND%
+</code></pre>
+<p>如果你用prime-run，加在前面就行</p>
+<h1 id="运行方式"><a href="#运行方式" class="headerlink" title="运行方式"></a>运行方式</h1><h2 id="找到你运行的游戏ID"><a href="#找到你运行的游戏ID" class="headerlink" title="找到你运行的游戏ID"></a>找到你运行的游戏ID</h2><pre><code class="Bash">protonhax ls
+</code></pre>
 <blockquote>
 <p>如我运行Dishonored 2，则是403640</p>
 </blockquote>
-<h2 id="在游戏的同一容器内运行程序"><a href="#在游戏的同一容器内运行程序" class="headerlink" title="在游戏的同一容器内运行程序"></a>在游戏的同一容器内运行程序</h2><p>protonhax run <gameid> &lt;path/program&gt;</gameid></p>
+<h2 id="在游戏的同一容器内运行程序"><a href="#在游戏的同一容器内运行程序" class="headerlink" title="在游戏的同一容器内运行程序"></a>在游戏的同一容器内运行程序</h2><pre><code class="Bash">protonhax run &lt;gameid&gt; &lt;path/program&gt;
+</code></pre>
 <blockquote>
 <p>如我需要运行Dishonored 2修改器，则是<code>protonhax run 403640 &lt;修改器路径&gt;</code></p>
 </blockquote>
