@@ -124,7 +124,7 @@
     
     
     <entry>
-      <title>Wayfire&amp;Awesome</title>
+      <title>Wayfire&amp;Awesome-Wayland&amp;X11</title>
       <link href="/posts/2023/01/24/Wayfire-Awesome/"/>
       <url>/posts/2023/01/24/Wayfire-Awesome/</url>
       
@@ -145,6 +145,10 @@
             <tag> wayfire </tag>
             
             <tag> awesome </tag>
+            
+            <tag> wayland </tag>
+            
+            <tag> X11 </tag>
             
         </tags>
       
