@@ -22,9 +22,9 @@
             
             <tag> arch </tag>
             
-            <tag> wayland </tag>
-            
             <tag> hyprland </tag>
+            
+            <tag> wayland </tag>
             
         </tags>
       
@@ -227,11 +227,11 @@
             
             <tag> arch </tag>
             
+            <tag> wayland </tag>
+            
             <tag> wayfire </tag>
             
             <tag> awesome </tag>
-            
-            <tag> wayland </tag>
             
             <tag> X11 </tag>
             
